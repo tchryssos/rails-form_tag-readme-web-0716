@@ -112,3 +112,24 @@ Processing by PostsController#new as HTML
   Parameters: {"post"=>{"action"=>"create", "authenticity_token"=>"wM0kUAuTuVVs64yO9C+2FgVExLWEkXYBL4fHjMvdHb/wXQBnEIZ1bXK7fKn5neP40gN03qULwt9kcGv5dkFKWg==", "commit"=>"Submit Post", "controller"=>"posts", "description"=>"asdf", "title"=>"Rails Introduction Quiz", "utf8"=>"✓"}}
   Rendered posts/new.html.erb within layouts/application (0.3ms)
 Completed 200 OK in 8ms (Views: 7.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/new" for ::1 at 2016-08-17 15:51:16 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 220ms (Views: 212.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for ::1 at 2016-08-17 15:51:47 -0400
+Processing by PostsController#create as HTML
+  Parameters: {"post_title"=>"Cool dads", "post_description"=>"oh no", "authenticity_token"=>"gqv+88NF9Eag5C7+SR0pWLJosFjRQ4h88JpunvkEPunlZhXHLnW83i5aiaU9SYIVS+3dE84OTZzriRbdAidm0g=="}
+Redirected to http://localhost:3000/posts/new?post%5Baction%5D=create&post%5Bauthenticity_token%5D=gqv%2B88NF9Eag5C7%2BSR0pWLJosFjRQ4h88JpunvkEPunlZhXHLnW83i5aiaU9SYIVS%2B3dE84OTZzriRbdAidm0g%3D%3D&post%5Bcontroller%5D=posts&post%5Bpost_description%5D=oh+no&post%5Bpost_title%5D=Cool+dads
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/new?post%5Baction%5D=create&post%5Bauthenticity_token%5D=gqv%2B88NF9Eag5C7%2BSR0pWLJosFjRQ4h88JpunvkEPunlZhXHLnW83i5aiaU9SYIVS%2B3dE84OTZzriRbdAidm0g%3D%3D&post%5Bcontroller%5D=posts&post%5Bpost_description%5D=oh+no&post%5Bpost_title%5D=Cool+dads" for ::1 at 2016-08-17 15:51:47 -0400
+Processing by PostsController#new as HTML
+  Parameters: {"post"=>{"action"=>"create", "authenticity_token"=>"gqv+88NF9Eag5C7+SR0pWLJosFjRQ4h88JpunvkEPunlZhXHLnW83i5aiaU9SYIVS+3dE84OTZzriRbdAidm0g==", "controller"=>"posts", "post_description"=>"oh no", "post_title"=>"Cool dads"}}
+  Rendered posts/new.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 15ms (Views: 14.2ms | ActiveRecord: 0.0ms)
